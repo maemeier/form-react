@@ -4,11 +4,18 @@ import "./styles.css";
 
 class App extends React.Component {
   state = {
-    account: { username: "", password: "" }
+    account: { username: "", password: "" },
+    errors: {}
+  };
+
+  validate = () => {
+    return { username: "username is required" };
   };
   handleSubmit = event => {
     event.preventDefault();
-    this.setState({});
+    const error = this.validate();
+    this.setState({ error });
+    if (error) return;
   };
 
   handleChange = ({ currentTarget: input }) => {
