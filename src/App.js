@@ -27,9 +27,13 @@ class App extends React.Component {
   };
 
   // validateProperty
-  validateProperty = ({ name, input }) => {
+  validateProperty = ({ name, value }) => {
     if (name === "username") {
-      if (value.name.trim() === "") return "username is required";
+      if (value.trim() === "") return "username is required";
+    }
+
+    if (name === "pasword") {
+      if (value.trim() === "") return "password is required";
     }
   };
 
