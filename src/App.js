@@ -19,6 +19,7 @@ class App extends Form {
     password: Joi.string()
       .required()
       .label("Password")
+      .min(8)
   };
 
   doSubmit = () => {
