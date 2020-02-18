@@ -20,6 +20,7 @@ class App extends Form {
       .required()
       .label("Password")
       .min(8)
+      .max(40)
   };
 
   doSubmit = () => {
